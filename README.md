@@ -132,3 +132,23 @@ MongoDB là một hệ quản trị cơ sở dữ liệu phi quan hệ, mã ngu�
 - Không tốt cho các truy vấn phức tạp: Trong một số trường hợp, MongoDB có thể không hiệu quả cho các truy vấn phức tạp và yêu cầu xử lý phức tạp. Việc mô hình dữ liệu phi quan hệ của MongoDB có thể không phù hợp cho các tình huống này.
 - Khả năng quản lý dữ liệu: MongoDB có thể khó khăn trong việc quản lý dữ liệu khi dữ liệu trở nên lớn và phức tạp. Bạn cần có kiến thức và kỹ năng để thiết kế và triển khai hệ thống MongoDB hiệu quả.
 Tóm lại, MongoDB có nhiều ưu điểm như khả năng mở rộng, linh hoạt, truy vấn mạnh mẽ và hỗ trợ replica sets và sharding. Tuy nhiên, nó cũng có nhược điểm như thiếu tính nhất quán và đồng thuận, sử dụng tài nguyên cao và không phù hợp cho các truy vấn phức tạp. Việc sử dụng MongoDB nên được cân nhắc kỹ lưỡng dựa trên yêu cầu và điều kiện cụ thể của dự án.
+### 4. Cài đặt
+- Cập nhật ubuntu
+```
+sudo apt update
+sudo apt upgrade
+```
+- Thêm MongoDB Repository
+```
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+Sau đó, thêm MongoDB Repository vào danh sách nguồn:
+```
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+- Cài đặt mongo
+```
+sudo apt update
+sudo apt install mongodb-org
+```
+Sau khi tải xong thì dùng lệnh ` mongo ` để chạy mongo
