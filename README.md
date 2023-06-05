@@ -152,3 +152,12 @@ sudo apt update
 sudo apt install mongodb-org
 ```
 Sau khi tải xong thì dùng lệnh ` mongo ` để chạy mongo
+## 4. So sánh
+### 1. Giống nhau
+- Hỗ trợ ngôn ngữ truy vấn: MongoDB, PostgreSQL và Percona Server đều hỗ trợ các ngôn ngữ truy vấn tiêu chuẩn như SQL (Structured Query Language).
+- Hỗ trợ giao dịch: Cả PostgreSQL và Percona Server hỗ trợ giao dịch ACID (Atomicity, Consistency, Isolation, Durability), trong khi MongoDB hỗ trợ một hình thức giao dịch nhưng không đảm bảo tính nhất quán tuyệt đối.
+- Hỗ trợ các tính năng mở rộng: Cả MongoDB và Percona Server có khả năng mở rộng tuyến tính bằng cách thêm các node mới vào cụm. PostgreSQL cũng hỗ trợ mở rộng, nhưng cần có các phương pháp như partitioning hoặc replication.
+### 2. Khác nhau
+- Cấu trúc dữ liệu: MongoDB là một hệ quản trị cơ sở dữ liệu NoSQL, sử dụng mô hình dữ liệu linh hoạt với tài liệu JSON/BSON. PostgreSQL và Percona Server là các - Tính linh hoạt: MongoDB cho phép lưu trữ dữ liệu có cấu trúc và không cấu trúc một cách tự nhiên, trong khi PostgreSQL và Percona Server có cấu trúc cố định dựa trên các bảng và quan hệ.
+- Tính năng và mục đích sử dụng: MongoDB thích hợp cho các ứng dụng có yêu cầu linh hoạt và khả năng mở rộng, đặc biệt là trong các ứng dụng web và di động. PostgreSQL và Percona Server thường được sử dụng cho các ứng dụng doanh nghiệp, dữ liệu phức tạp, và các yêu cầu tính toán và truy vấn phức tạp.
+- Hiệu suất: Hiệu suất của các hệ quản trị cơ sở dữ liệu này có thể khác nhau tùy thuộc vào mục đích sử dụng, cấu trúc dữ liệu và tải công việc. Mỗi hệ có các cách tối ưu và cấu hình riêng để đạt được hiệu suất tốt nhất.
