@@ -154,6 +154,7 @@ sudo apt update
 sudo apt install mongodb-org
 ```
 Sau khi tải xong thì dùng lệnh ` mongo ` để chạy mongo
+Xem thêm về lệnh mongo tại https://wiki.matbao.net/mongodb-la-gi-tinh-nang-noi-bat-tu-mongodb-ban-can-biet/
 ## 4. So sánh
 ### 1. Giống nhau
 - Hỗ trợ ngôn ngữ truy vấn: MongoDB, PostgreSQL và Percona Server đều hỗ trợ các ngôn ngữ truy vấn tiêu chuẩn như SQL (Structured Query Language).
