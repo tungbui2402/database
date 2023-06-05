@@ -50,6 +50,7 @@ Package: *
 Pin: release o=Percona Development Team
 Pin-Priority: 1001
 ```
+Để vào percona thì ta dùng lệnh `mysql -u root -p` rồi nhập mật khẩu chúng ta đã đặt từ lúc cài đặt là xong.
 ## II. Postgre database
 ### 1. Khái niệm
 PostgreSQL là một hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở, được viết bằng ngôn ngữ C. Nó được biết đến với tên viết tắt là "Postgres" và thường được sử dụng để lưu trữ và quản lý dữ liệu trong các ứng dụng web, ứng dụng di động và các hệ thống thông tin doanh nghiệp.
@@ -110,7 +111,8 @@ Một lần nữa, bạn có thể thoát phiên Postgres tương tác bằng c�
 ```
 \q
 ```
-Nhiều trường hợp sử dụng yêu cầu nhiều hơn một Postgres role. Đọc tiếp để tìm hiểu cách định cấu hình chúng.
+Nhiều trường hợp sử dụng yêu cầu nhiều hơn một Postgres role.
+Postgre dùng lệnh khác mysql, có thể tham khảo lệnh ở trang web: https://cloudfly.vn/techblog/huong-dan-cai-dat-va-su-dung-postgresql-tren-ubuntu-2004
 ## 3. Mongo database
 ### 1. Khái niệm
 MongoDB là một hệ quản trị cơ sở dữ liệu phi quan hệ, mã nguồn mở và phân tán được thiết kế để lưu trữ và xử lý dữ liệu phi cấu trúc và có cấu trúc linh hoạt. MongoDB sử dụng mô hình dữ liệu JSON-like (BSON) để lưu trữ dữ liệu, giúp tương thích tốt với các ngôn ngữ lập trình hiện đại và phục vụ cho các ứng dụng có tính mở rộng và linh hoạt.
