@@ -51,6 +51,7 @@ Pin: release o=Percona Development Team
 Pin-Priority: 1001
 ```
 Để vào percona thì ta dùng lệnh `mysql -u root -p` rồi nhập mật khẩu chúng ta đã đặt từ lúc cài đặt là xong.
+Lệnh percona thì dùng như lệnh mysql.
 ## II. Postgre database
 ### 1. Khái niệm
 PostgreSQL là một hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở, được viết bằng ngôn ngữ C. Nó được biết đến với tên viết tắt là "Postgres" và thường được sử dụng để lưu trữ và quản lý dữ liệu trong các ứng dụng web, ứng dụng di động và các hệ thống thông tin doanh nghiệp.
@@ -113,6 +114,18 @@ Một lần nữa, bạn có thể thoát phiên Postgres tương tác bằng c�
 ```
 Nhiều trường hợp sử dụng yêu cầu nhiều hơn một Postgres role.
 Postgre dùng lệnh khác mysql, có thể tham khảo lệnh ở trang web: https://cloudfly.vn/techblog/huong-dan-cai-dat-va-su-dung-postgresql-tren-ubuntu-2004
+```
+psql: Khởi động PostgreSQL command-line interface (CLI) để thao tác với cơ sở dữ liệu.
+\l: Hiển thị danh sách các cơ sở dữ liệu có sẵn trên máy chủ PostgreSQL.
+\c <tên cơ sở dữ liệu>: Kết nối vào một cơ sở dữ liệu cụ thể.
+\dt: Hiển thị danh sách các bảng có sẵn trong cơ sở dữ liệu hiện tại.
+SELECT * FROM <tên bảng>: Lấy tất cả các dòng từ một bảng.
+INSERT INTO <tên bảng> (<các cột>) VALUES (<giá trị>): Chèn một dòng mới vào bảng với các giá trị cụ thể.
+UPDATE <tên bảng> SET <cột> = <giá trị> WHERE <điều kiện>: Cập nhật các giá trị trong bảng dựa trên một điều kiện.
+DELETE FROM <tên bảng> WHERE <điều kiện>: Xóa các dòng từ bảng dựa trên một điều kiện.
+ALTER TABLE <tên bảng> ADD COLUMN <tên cột> <kiểu dữ liệu>: Thêm một cột mới vào bảng.
+CREATE INDEX <tên index> ON <tên bảng> (<cột>): Tạo một chỉ mục cho một cột trong bảng.
+```
 ## 3. Mongo database
 ### 1. Khái niệm
 MongoDB là một hệ quản trị cơ sở dữ liệu phi quan hệ, mã nguồn mở và phân tán được thiết kế để lưu trữ và xử lý dữ liệu phi cấu trúc và có cấu trúc linh hoạt. MongoDB sử dụng mô hình dữ liệu JSON-like (BSON) để lưu trữ dữ liệu, giúp tương thích tốt với các ngôn ngữ lập trình hiện đại và phục vụ cho các ứng dụng có tính mở rộng và linh hoạt.
@@ -155,6 +168,17 @@ sudo apt install mongodb-org
 ```
 Sau khi tải xong thì dùng lệnh ` mongo ` để chạy mongo
 Xem thêm về lệnh mongo tại https://wiki.matbao.net/mongodb-la-gi-tinh-nang-noi-bat-tu-mongodb-ban-can-biet/
+```
+show databases: Hiển thị danh sách các cơ sở dữ liệu có sẵn trên máy chủ MongoDB.
+use <tên cơ sở dữ liệu>: Chọn cơ sở dữ liệu để làm việc.
+show collections: Hiển thị danh sách các bộ sưu tập (collections) trong cơ sở dữ liệu hiện tại.
+db.collectionName.find(): Lấy tất cả các tài liệu (documents) trong một bộ sưu tập.
+db.collectionName.findOne(): Lấy một tài liệu đầu tiên trong một bộ sưu tập.
+db.collectionName.insertOne(document): Chèn một tài liệu mới vào bộ sưu tập.
+db.collectionName.updateOne(filter, update): Cập nhật một tài liệu đầu tiên trong bộ sưu tập dựa trên một bộ lọc và một bản cập nhật.
+db.collectionName.deleteOne(filter): Xóa một tài liệu đầu tiên khớp với bộ lọc từ bộ sưu tập.
+db.collectionName.aggregate(pipeline): Thực hiện các pha tổng hợp (aggregation) trên bộ sưu tập, cho phép bạn thực hiện các phép tính phức tạp như nhóm, sắp xếp, lọc và tính toán.
+```
 ## 4. So sánh
 ### 1. Giống nhau
 - Hỗ trợ ngôn ngữ truy vấn: MongoDB, PostgreSQL và Percona Server đều hỗ trợ các ngôn ngữ truy vấn tiêu chuẩn như SQL (Structured Query Language).
